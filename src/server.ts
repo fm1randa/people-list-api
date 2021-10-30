@@ -4,7 +4,7 @@ import cors from 'cors';
 const app = express();
 app.use(express.json());
 app.use(cors());
-const port = 3000;
+const port = 3333;
 
 type GroupType = {
 	id: number;
@@ -74,6 +74,6 @@ app.post('/list', (req: Request, res: Response) => {
 	}
 });
 
-app.listen(3333, () => {
+app.listen(port, () => {
 	console.log(`API is running @ localhost:${port}!`);
 });
