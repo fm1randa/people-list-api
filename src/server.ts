@@ -31,8 +31,11 @@ const list: InsertedPerson[] = [
 let sequence = 3;
 
 function defineGroup(age: number): GroupType {
-	if (age >= 0 && age < 15) {
+	if (age >= 0 && age < 12) {
 		return { id: 1, name: 'Criança' };
+	}
+	if (age >= 12 && age < 15) {
+		return { id: 2, name: 'Pré-adolescente' };
 	}
 	if (age >= 15 && age <= 19) {
 		return { id: 3, name: 'Adolescente' };
