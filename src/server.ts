@@ -53,7 +53,8 @@ function nameNormalize(name: string): string {
 	}, '');
 	return normalizedName;
 }
-
+app.get('/', (req, res) => res.send('API is running!'));
+app.get('/list', (req, res) => res.status(200).json(list));
 app.post('/list', (req: Request, res: Response) => {
 	try {
 		const person = req.body as ToBeInsertedPerson;
